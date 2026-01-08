@@ -68,7 +68,7 @@ export type SiteConfig = {
 };
 
 const siteConfig: SiteConfig = {
-    website: 'https://example.com',
+    website: 'https://web-taro-note.pages.dev',
     title: 'Japanese Learning Notes',
     description: 'A collection of Japanese learning notes and articles.',
     image: {
@@ -137,20 +137,20 @@ const siteConfig: SiteConfig = {
             src: '/assets/images/pixeltrue-space-discovery.svg',
             alt: 'A person sitting at a desk in front of a computer'
         },
-        actions: [
-            {
-                text: 'Read Now',
-                href: withBase('/blog')
-            },
-            {
-                text: 'Subscribe',
-                href: '#subscribe'
-            }
-        ]
+        // actions: [
+        //     {
+        //         text: 'Read Now',
+        //         href: withBase('/blog')
+        //     },
+        //     {
+        //         text: 'Subscribe',
+        //         href: '#subscribe'
+        //     }
+        // ]
     },
     about: {
-        title: 'About',
-        text: 'Space Ahead is a blog about space exploration and travel. It is written by Astro-naut Sid, a space explorer at Beyond Earth. Sid is known for his love of adventure and his insatiable curiosity about the universe. He has explored countless planets, discovered new life forms, and made friends with aliens along the way. 🚀',
+        title: '關於我',
+        text: '大家好，我是 Taro。目前正走在學習日語的旅程上。這個網站用來記錄並分享我感興趣的日本時下流行內容與學習筆記。希望能透過這些分享，與大家一起探索日本文化的魅力，共同進步！',
     },
     contactInfo: {
         title: 'Contact',
