@@ -2,15 +2,16 @@
 import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
 import siteConfig from "../site.config";
-import coverImage from "../assets/images/1.png";
+// import coverImage from "../assets/images/1.png";
+import coverImage from "../assets/images/snowboarding.png";
 ---
 
 <MainLayout activePage="about" pageTitle={siteConfig.title + " | About"}>
   <div class="page-content">
     <h1 class="sigmar-ff text-balance">{siteConfig.about?.title}</h1>
     <Image
-      width={1024}
-      height={600}
+      width={480}
+      height={480}
       loading="eager"
       layout="constrained"
       class="rounded-4xl mb-8 mx-auto"
@@ -19,6 +20,13 @@ import coverImage from "../assets/images/1.png";
     />
     <p class="kanit-light text-left">
       {siteConfig.about?.text}
+    </p>
+    <p class="kanit-light text-left">
+      如果您有任何建議或合作機會，歡迎聯繫我：
+      <a
+        href="mailto:contact@taro-h.com"
+        class="text-skin-accent hover:underline">contact@taro-h.com</a
+      >
     </p>
   </div>
 </MainLayout>
