@@ -39,49 +39,50 @@ const { Content } = await render(post);
 
 <MainLayout pageTitle={siteConfig.title + " | " + title}>
   <div class="page-content">
-    <h1 class="sigmar-ff text-center text-balance">{title}</h1>
+    <!-- <h1 class="sigmar-ff text-center text-balance">{title}</h1> -->
     <p class="leading-8 text-center kanit-regular text-balance text-xs">
-      by 🧑‍🚀 <span class="kanit-bold">{author}</span> on <span class="kanit-bold"
-        >{new Date(pubDate).toDateString()}</span
-      >
-    </p>
-    {
-      image && image.url && (
-        <Image class="mb-8 my-6" src={image?.url} alt={image?.alt || ""} />
-      )
-    }
-    <div class="font-light text-left">
-      <Content />
-    </div>
-    <p class="kanit-regular text-center text-balance text-xs">
-      Tagged: {
-        tags.map((tag) => (
-          <Button
-            class="px-4! m-2"
-            href={withBase("/tags/" + createSlugFromTitle(tag))}
-          >
-            {tag}
-          </Button>
-        ))
-      }
-    </p>
-    <div
-      class="flex flex-col sm:flex-row items-center justify-center gap-4 my-8"
-    >
-      <Button class="back-link" href={withBase("/blog")}>
-        <ArrowLeft class="w-5 h-5 fill-current mr-4" /> Back to All Stories
-      </Button>
+      <span class="kanit-bold">{new Date(pubDate).toDateString()}</span>
       {
-        (prevPost || nextPost) && nextPost && (
-          <Button
-            class="back-link text-balance"
-            href={withBase("/blog/" + nextPost.id)}
-          >
-            Next Post: {nextPost.data.title}{" "}
-            <ArrowRight class="w-5 h-5 fill-current ml-4" />
-          </Button>
+        image && image.url && (
+          <Image class="mb-8 my-6" src={image?.url} alt={image?.alt || ""} />
         )
       }
-    </div>
+      <div
+        class="font-light text-left max-h-[calc(100vh-20rem)] overflow-y-auto no-scrollbar"
+      >
+        <Content />
+
+        <p class="kanit-regular text-center text-balance text-xs">
+          Tagged: {
+            tags.map((tag) => (
+              <Button
+                class="px-4! m-2"
+                href={withBase("/tags/" + createSlugFromTitle(tag))}
+              >
+                {tag}
+              </Button>
+            ))
+          }
+        </p>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 my-8"
+        >
+          <Button class="back-link" href={withBase("/blog")}>
+            <ArrowLeft class="w-5 h-5 fill-current mr-4" /> Back to All Stories
+          </Button>
+          {
+            (prevPost || nextPost) && nextPost && (
+              <Button
+                class="back-link text-balance"
+                href={withBase("/blog/" + nextPost.id)}
+              >
+                Next Post: {nextPost.data.title}{" "}
+                <ArrowRight class="w-5 h-5 fill-current ml-4" />
+              </Button>
+            )
+          }
+        </div>
+      </div>
+    </p>
   </div>
 </MainLayout>

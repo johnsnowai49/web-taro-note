@@ -41,12 +41,17 @@ const {
     />
     <title>{pageTitle}</title>
   </head>
-  <body>
-    <main class="max-w-3xl mx-auto min-h-screen">
-      <Nav activePage={activePage} />
-      <slot />
-      {showSubscribeForm && <Subscribe class="my-12 w-full" />}
-      <Footer />
-    </main>
+  <body class="flex flex-col h-screen overflow-hidden">
+    <Nav activePage={activePage} />
+    <div
+      class="flex-grow overflow-y-hidden w-full"
+      id="content-scroll-container"
+    >
+      <main class="w-full max-w-5xl mx-auto">
+        <slot />
+        {showSubscribeForm && <Subscribe class="my-12 w-full" />}
+      </main>
+    </div>
+    <Footer />
   </body>
 </html>
