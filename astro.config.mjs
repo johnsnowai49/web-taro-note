@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import preact from "@astrojs/preact";
 import sitemap from "@astrojs/sitemap";
-import swup from "@swup/astro";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -10,11 +9,6 @@ export default defineConfig({
   site: "https://web-taro-note.pages.dev",
   // base: "/space-ahead",
   integrations: [
-    swup({
-      theme: ["overlay", { direction: "to-top" }],
-      cache: true,
-      progress: true,
-    }),
     preact(),
     sitemap(),
   ],

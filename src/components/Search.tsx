@@ -58,7 +58,7 @@ export default function Search({ posts, tags }: SearchProps) {
     return (
         <div class="w-full max-w-4xl mx-auto my-8">
             {/* Search Bar Container */}
-            <div class="sticky top-4 z-50 mb-4 p-2 border border-skin-line rounded-lg bg-skin-fill/90 backdrop-blur-sm shadow-sm focus-within:ring-2 focus-within:ring-skin-accent flex flex-wrap gap-2 items-center transition-all">
+            <div class="mb-4 p-2 border border-skin-line rounded-lg bg-skin-fill/90 backdrop-blur-sm shadow-sm focus-within:ring-2 focus-within:ring-skin-accent flex flex-wrap gap-2 items-center transition-all">
 
                 {/* Selected Tags Chips */}
                 {selectedTags.map(tag => (
@@ -118,7 +118,7 @@ export default function Search({ posts, tags }: SearchProps) {
             </div>
 
             {/* Post List - Scrollable */}
-            <div class="space-y-4 w-full max-h-[700px] overflow-y-auto no-scrollbar">
+            <div class="space-y-2">
                 {filteredPosts.length > 0 ? (
                     filteredPosts.map((post) => (
                         <a

@@ -55,7 +55,9 @@ const {
   </head>
   <body class="flex flex-col h-screen overflow-hidden">
     <Nav activePage={activePage} />
-    <main class="w-full max-w-5xl mx-auto">
+    <main
+      class="w-full max-w-5xl mx-auto overflow-y-scroll overflow-x-hidden no-scrollbar"
+    >
       <slot />
       {showSubscribeForm && <Subscribe class="my-12 w-full" />}
     </main>
