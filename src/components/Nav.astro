@@ -9,7 +9,7 @@ const { activePage } = Astro.props;
 ---
 
 <header>
-  <nav class="font-light w-full">
+  <nav class="font-light w-5xl">
     <a href={withBase("/")}><SiteIdentity /></a>
     <div class="hidden sm:flex sm:gap-8">
       {(<NavLinks activePage={activePage} links={siteConfig.headerNavLinks} />)}

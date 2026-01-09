@@ -84,17 +84,10 @@ const siteConfig: SiteConfig = {
             text: 'Blog',
             href: withBase('/blog')
         },
-        {
-            text: 'Tags',
-            href: withBase('/tags')
-        },
+
         {
             text: 'About',
             href: withBase('/about')
-        },
-        {
-            text: 'Contact',
-            href: withBase('/contact')
         }
     ],
     footerNavLinks: [
@@ -103,36 +96,20 @@ const siteConfig: SiteConfig = {
             href: withBase('/about')
         },
         {
-            text: 'Contact',
-            href: withBase('/contact')
-        },
-        {
             text: 'RSS Feed',
             href: withBase('/rss.xml')
         },
-        {
-            text: 'Sitemap',
-            href: withBase('/sitemap-index.xml')
-        }
     ],
     socialLinks: [
         {
-            text: 'Dribbble',
-            href: 'https://dribbble.com/'
-        },
-        {
-            text: 'Instagram',
-            href: 'https://instagram.com/'
-        },
-        {
-            text: 'X/Twitter',
-            href: 'https://twitter.com/'
+            text: 'Threads',
+            href: 'https://www.threads.com/@taroai49'
         }
     ],
     hero: {
-        eyebrowText: 'Japanese Learning Journey',
-        title: 'Japanese Notes 🇯🇵',
-        text: "Daily Japanese learning notes and vocabulary.",
+        eyebrowText: "Weekly Update ✨",
+        title: "Taro's Journey",
+        text: "一起透過有趣的日本新聞學習日文吧！",
         image: {
             src: '/assets/images/pixeltrue-space-discovery.svg',
             alt: 'A person sitting at a desk in front of a computer'
@@ -149,7 +126,7 @@ const siteConfig: SiteConfig = {
         // ]
     },
     about: {
-        title: '關於我',
+        title: 'About Me',
         text: '大家好，我是 Taro。目前正走在學習日語的旅程上。這個網站用來記錄並分享我感興趣的日本時下流行內容與學習筆記。希望能透過這些分享，與大家一起探索日本文化的魅力，共同進步！',
     },
     contactInfo: {
@@ -184,7 +161,7 @@ const siteConfig: SiteConfig = {
         // description: ""
     },
     postsPerPage: 2,
-    recentPostLimit: 3
+    recentPostLimit: 2
 };
 
 export default siteConfig;

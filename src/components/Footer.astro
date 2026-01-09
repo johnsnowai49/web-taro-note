@@ -4,45 +4,32 @@ import SiteIdentity from "./SiteIdentity.astro";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="kanit-light text-xs sm:text-sm">
-  <div
-    class="footer-primary flex flex-col items-center justify-center min-w-full border-t border-gray-500/50"
-  >
-    <div
-      class="flex flex-row items-center justify-around sm:justify-center gap-2 sm:gap-6 pt-6 pb-3 sm:px-6 text-center"
-    >
-      {
-        siteConfig.footerNavLinks?.map((link) => (
-          <a href={link.href} title={link.text}>
-            {link.text}
-          </a>
-        ))
-      }
-    </div>
+<footer
+  class="w-5xl mx-auto mt-auto border-t border-skin-line p-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm kanit-light"
+>
+  <div class="flex items-center gap-6">
+    {
+      siteConfig.footerNavLinks?.map((link) => (
+        <a href={link.href} title={link.text} class="hover:underline">
+          {link.text}
+        </a>
+      ))
+    }
+    {
+      siteConfig.socialLinks?.map((link) => (
+        <a
+          href={link.href}
+          title={link.text}
+          target="_blank"
+          class="hover:text-skin-accent transition-colors"
+        >
+          {link.text}
+        </a>
+      ))
+    }
   </div>
-  <div
-    class="footer-secondary flex flex-col sm:flex-row items-center justify-between gap-6 min-w-full"
-  >
-    <div class="flex flex-row gap-2 items-center justify-start text-balance">
-      <span>&copy; {currentYear}</span>
-      {siteConfig.title}. All rights reserved.
-    </div>
-    <div class="flex flex-row gap-4 items-center justify-end-safe">
-      {
-        siteConfig.socialLinks?.map((link) => (
-          <a href={link.href} title={link.text} target="_blank">
-            {link.text}
-          </a>
-        ))
-      }
-    </div>
-  </div>
-  <div
-    class="footer-identity h-40 sm:h-18 text-center overflow-clip sticky bottom-0 items-end"
-  >
-    <span
-      class="sigmar-ff text-8xl sm:text-[6.5rem] leading-none text-whitesmoke/50 dark:text-gray-300/30"
-      >{siteConfig.title}</span
-    >
+
+  <div class="flex items-center gap-2 text-balance text-center sm:text-left">
+    <span>&copy; {currentYear} {siteConfig.title}. All rights reserved.</span>
   </div>
 </footer>
