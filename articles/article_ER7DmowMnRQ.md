@@ -3,7 +3,7 @@ title: "山田勝己、60歳の挑戦：SASUKEへの愛と不屈の魂"
 pubDate: 2026-01-08
 description: "Yamada Katsumi's 60th birthday SASUKE challenge vocabulary."
 author: "Chinese"
-tags: ["Japanese", "SASUKE", "Entertainment", "Vocabulary"]
+tags: ["SASUKE", "Entertainment"]
 image:
   url: ""
   alt: ""
