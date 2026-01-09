@@ -1,10 +1,9 @@
-# Space Ahead ✨ - An Astro v5 Personal Blog Template
+# Taro H Blog ✨
 
-A minimal space-inspired personal blog template, created by Siddhesh Thadeshwar.
 
-![Space Ahead ✨](/space-ahead-preview.jpeg)
+A personal blog built with Astro v5 template created by Siddhesh Thadeshwar.
 
-See the [demo](https://djsiddz.github.io/space-ahead) to know more.
+![Space Ahead ✨](/taro-logo.jpeg)
 
 ## 🆕 Real-like Demo
 

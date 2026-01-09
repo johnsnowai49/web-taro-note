@@ -69,7 +69,7 @@ export type SiteConfig = {
 
 const siteConfig: SiteConfig = {
     website: 'https://web-taro-note.pages.dev',
-    title: 'Japanese Learning Notes',
+    title: 'Taro H',
     description: 'A collection of Japanese learning notes and articles.',
     image: {
         src: '/space-ahead-preview.jpeg',
@@ -181,7 +181,7 @@ const siteConfig: SiteConfig = {
     //     formUrl: '#'
     // },
     blog: {
-        description: "Read about my space adventures, explorations and the aliens I've met on my journeys."
+        // description: ""
     },
     postsPerPage: 2,
     recentPostLimit: 3
