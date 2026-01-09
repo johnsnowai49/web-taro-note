@@ -2,7 +2,6 @@
 title: "麺屋周郷神田店：赤つけ麺の真髄と美学"
 pubDate: 2026-01-08
 description: "Menya Sugo Kanda Store review and vocabulary."
-author: "Chinese"
 tags: ["Ramen", "Food"]
 image:
   url: ""

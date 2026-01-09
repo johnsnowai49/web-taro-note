@@ -2,7 +2,6 @@
 title: "ブレイキングダウン18 オーディション：波乱の幕開け"
 pubDate: 2026-01-08
 description: "Breaking Down 18 Audition vocabulary and summary."
-author: "Chinese"
 tags: ["Entertainment"]
 image:
   url: ""

@@ -2,7 +2,6 @@
 title: "横浜家系ラーメン竹村家 (Yokohama Iekei Ramen Takemura-ya)"
 pubDate: 2026-01-08
 description: "Yokohama Iekei Ramen Takemura-ya review and vocabulary from SUSURU TV."
-author: "Chinese"
 tags: ["Ramen", "Food"]
 image:
   url: ""
