@@ -40,6 +40,18 @@ const {
       href={new URL(withBase("/rss.xml"), Astro.site)}
     />
     <title>{pageTitle}</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HKP1PELE06"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-HKP1PELE06");
+    </script>
   </head>
   <body class="flex flex-col h-screen overflow-hidden">
     <Nav activePage={activePage} />
