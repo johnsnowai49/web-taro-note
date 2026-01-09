@@ -1,0 +1,47 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import {
+  getAllTags,
+  getPostsByTag,
+  sortItemsByDateDesc,
+  withBase,
+} from "../../utils/helpers";
+import MainLayout from "../../layouts/MainLayout.astro";
+import siteConfig from "../../site.config";
+import PostCardPreview from "../../components/PostCardPreview.astro";
+import Search from "../../components/Search";
+import Button from "../../components/Button.astro";
+
+const posts = (await getCollection("blogs")).sort(sortItemsByDateDesc);
+const tags = getAllTags(posts)
+  .map((tag) => ({
+    name: tag.name,
+    count: getPostsByTag(posts, tag.id).length,
+  }))
+  .sort((a, b) => b.count - a.count);
+---
+
+<MainLayout activePage="blog" pageTitle={siteConfig.title + " | Blog Archive"}>
+  <div class="page-content py-4 text-center">
+    <h1 class="sigmar-ff">Blog</h1>
+    {
+      siteConfig.blog?.description && (
+        <p class="font-light text-balance">{siteConfig.blog?.description}</p>
+      )
+    }
+
+    <Search client:load posts={posts} tags={tags} />
+
+    {
+      /* Fallback for no JS or just server-side listing - actually Search component handles listing now. 
+        But wait, Search component renders the list. So I should remove the static map below to avoid duplication?
+        User said "don't use page. use scroll windows to show all articles". 
+        If Search handles it, I should remove the static list below.
+        However, for SEO and initial paint, it's good to have them. 
+        But if Search component does client-side filtering, it might replace the content. 
+        If I put `client:load`, it hydrates.
+        My Search component Renders the list. So I should REMOVE the static map here.
+    */
+    }
+  </div>
+</MainLayout>
