@@ -2,8 +2,7 @@
 title: "Article Title Here"
 pubDate: 2026-01-01
 description: "A short summary of the content."
-author: "Chinese"
-tags: ["Japanese", "Learning", "Grammar"]
+tags: ["Ramen"]
 image:
   url: "/assets/images/default-cover.jpg" # Optional
   alt: "Cover image alt text" # Optional
