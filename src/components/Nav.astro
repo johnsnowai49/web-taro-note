@@ -1,6 +1,5 @@
 ---
 import siteConfig, { type Link } from "../site.config";
-import Hamburger from "./Hamburger.astro";
 import ThemeSwitcher from "./ThemeSwitcher.astro";
 import SiteIdentity from "./SiteIdentity.astro";
 import NavLinks from "./NavLinks.astro";
@@ -9,13 +8,12 @@ const { activePage } = Astro.props;
 ---
 
 <header>
-  <nav class="font-light w-5xl">
+  <nav class="font-light w-full max-w-5xl">
     <a href={withBase("/")}><SiteIdentity /></a>
-    <div class="hidden sm:flex sm:gap-8">
+    <div class="flex gap-4 sm:gap-8">
       {(<NavLinks activePage={activePage} links={siteConfig.headerNavLinks} />)}
     </div>
     <ThemeSwitcher />
-    <Hamburger />
   </nav>
   <div
     id="mobile-links"
@@ -30,13 +28,6 @@ const { activePage } = Astro.props;
   </div>
 </header>
 <script is:inline>
-  document.querySelector("#hamburger-menu").addEventListener("click", () => {
-    console.log("clicked...");
-    document.querySelector("#mobile-links").classList.remove("slideOutUp");
-    document.querySelector("#mobile-links").classList.add("expanded");
-    document.querySelector("#mobile-links").classList.add("slideInDown");
-  });
-
   document.querySelector(".close-menu").addEventListener("click", () => {
     console.log("clicked...");
     document.querySelector("#mobile-links").classList.add("slideOutUp");

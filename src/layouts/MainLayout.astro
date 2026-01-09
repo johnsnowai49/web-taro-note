@@ -55,15 +55,10 @@ const {
   </head>
   <body class="flex flex-col h-screen overflow-hidden">
     <Nav activePage={activePage} />
-    <div
-      class="flex-grow overflow-y-hidden w-full"
-      id="content-scroll-container"
-    >
-      <main class="w-full max-w-5xl mx-auto">
-        <slot />
-        {showSubscribeForm && <Subscribe class="my-12 w-full" />}
-      </main>
-    </div>
+    <main class="w-full max-w-5xl mx-auto">
+      <slot />
+      {showSubscribeForm && <Subscribe class="my-12 w-full" />}
+    </main>
     <Footer />
   </body>
 </html>

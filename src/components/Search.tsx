@@ -58,7 +58,7 @@ export default function Search({ posts, tags }: SearchProps) {
     return (
         <div class="w-full max-w-4xl mx-auto my-8">
             {/* Search Bar Container */}
-            <div class="sticky top-4 z-50 mb-8 p-2 border border-skin-line rounded-lg bg-skin-fill/90 backdrop-blur-sm shadow-sm focus-within:ring-2 focus-within:ring-skin-accent flex flex-wrap gap-2 items-center transition-all">
+            <div class="sticky top-4 z-50 mb-4 p-2 border border-skin-line rounded-lg bg-skin-fill/90 backdrop-blur-sm shadow-sm focus-within:ring-2 focus-within:ring-skin-accent flex flex-wrap gap-2 items-center transition-all">
 
                 {/* Selected Tags Chips */}
                 {selectedTags.map(tag => (
@@ -110,7 +110,7 @@ export default function Search({ posts, tags }: SearchProps) {
                     <button
                         key={tag.name}
                         onClick={() => toggleTag(tag.name)}
-                        class="px-3 py-1 text-sm rounded-full transition-colors border bg-skin-card text-skin-base border-skin-line hover:border-skin-accent"
+                        class="text-xs px-3 py-1  rounded-full transition-colors border bg-skin-card text-skin-base border-skin-line hover:border-skin-accent"
                     >
                         {tag.name} ({tag.count})
                     </button>
