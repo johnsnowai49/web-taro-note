@@ -86,7 +86,7 @@ h1 {
 }
 
 h2 {
-  @apply py-2 text-xl sm:py-4 sm:text-3xl;
+  @apply py-2 text-xl sm:py-4 sm:text-3xl font-bold;
 }
 
 p {
@@ -153,4 +153,74 @@ html.dark a:not(.button-link):hover {
   section {
     gap: 3rem;
   }
+}
+
+/* Article Styling */
+.article-content {
+  @apply w-full max-w-4xl mx-auto space-y-8;
+}
+
+.section-summary {
+  @apply bg-black/5 dark:bg-white/5 p-6 rounded-2xl border border-black/10 dark:border-white/10;
+}
+
+.learning-card {
+  @apply mb-6 rounded-2xl border overflow-hidden transition-all duration-300 hover:shadow-lg bg-white/50 border-black/10 dark:bg-white/5 dark:border-white/10;
+}
+
+.learning-card h3 {
+  @apply bg-black/5 dark:bg-white/10 text-black dark:text-whitesmoke p-4 font-bold border-b border-black/10 dark:border-white/10 m-0 text-lg;
+}
+
+.card-content {
+  @apply p-6 space-y-4;
+}
+
+.card-content p {
+  @apply mb-2 leading-relaxed;
+}
+
+.label {
+  @apply font-bold opacity-70 inline-block min-w-[5em];
+}
+
+.examples {
+  @apply mt-4 p-4 bg-white/50 dark:bg-black/20 rounded-xl;
+}
+
+.examples .label {
+  @apply block mb-2 text-sm uppercase tracking-wider opacity-60;
+}
+
+.examples ul {
+  @apply list-none space-y-4 pl-0;
+}
+
+.examples li {
+  @apply border-l-2 border-black/10 dark:border-white/10 pl-4 py-1;
+}
+
+.examples span:first-child {
+  @apply font-medium block mb-1;
+}
+
+.translation {
+  @apply text-sm opacity-80 italic block;
+}
+
+.section-quiz {
+  @apply p-8 bg-black/5 dark:bg-white/5 rounded-3xl border-2 border-dashed border-black/10 dark:border-white/10;
+}
+
+.section-quiz h3 {
+  @apply text-xl font-bold mb-6 border-b border-black/10 dark:border-white/10 pb-2;
+}
+
+/* Ruby text enhancements */
+ruby {
+  @apply font-normal;
+}
+
+rt {
+  @apply text-[0.6em] text-space-red dark:text-space-yellow font-normal opacity-90 select-none;
 }
