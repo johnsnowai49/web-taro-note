@@ -46,7 +46,13 @@ const { Content } = await render(post);
       <span class="kanit-bold">{new Date(pubDate).toDateString()}</span>
       {
         image && image.url && (
-          <Image class="mb-8 my-6" src={image?.url} alt={image?.alt || ""} />
+          <Image
+            class="mb-8 my-6"
+            src={image?.url}
+            alt={image?.alt || ""}
+            width={image?.width || 1024}
+            height={image?.height || 724}
+          />
         )
       }
       <div class="text-left">
