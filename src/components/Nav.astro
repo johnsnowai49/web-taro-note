@@ -27,15 +27,6 @@ const { activePage } = Astro.props;
     />
   </div>
 </header>
-<script is:inline>
-  document.querySelector(".close-menu").addEventListener("click", () => {
-    console.log("clicked...");
-    document.querySelector("#mobile-links").classList.add("slideOutUp");
-    document.querySelector("#mobile-links").classList.add("expanded");
-    document.querySelector("#mobile-links").classList.remove("slideInDown");
-  });
-</script>
-
 <style>
   @media (orientation: portrait) {
     #mobile-links.expanded {

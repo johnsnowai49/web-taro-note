@@ -3,7 +3,6 @@ import "../styles/global.css";
 
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
-import Subscribe from "../components/Subscribe.astro";
 import { withBase } from "../utils/helpers";
 import siteConfig from "../site.config";
 
@@ -59,8 +58,7 @@ const {
       class="w-full max-w-5xl mx-auto overflow-y-scroll overflow-x-hidden no-scrollbar"
     >
       <slot />
-      {showSubscribeForm && <Subscribe class="my-12 w-full" />}
     </main>
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>
